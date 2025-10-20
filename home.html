@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Home</title>
+    <style>
+      /* ===================================== */
+      /* 1. ATURAN DASAR & RESET */
+      /* ===================================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+      /* Container untuk batasan lebar (opsional tapi disarankan) */
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* Padding samping untuk responsif */
+      }
+      /* ===================================== */
+      /* 2. HEADER & NAVIGASI */
+      /* ===================================== */
+
+      header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #0056b3;
+        padding: 10px 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1rem;
+        padding: 5px 10px;
+        /* Area klik yang lebih besar */
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #004499;
+        text-decoration: none;
+      }
+      /* ===================================== */
+      /* 3. HERO SECTION */
+      /* ===================================== */
+
+      .hero {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        /* Ditingkatkan sedikit */
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        /* Batasi lebar teks untuk keterbacaan */
+        margin: 0 auto 20px;
+      }
+
+      .hero .button {
+        padding: 12px 25px;
+        /* Tombol lebih besar */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+      }
+
+      .hero .button:hover {
+        background-color: #0056b3;
+      }
+      /* ===================================== */
+      /* 4. SECTION KONTEN UMUM */
+      /* ===================================== */
+
+      .section-content {
+        padding: 60px 0;
+      }
+
+      .section-content h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #007bff;
+      }
+      /* ===================================== */
+      /* 5. PROJECTS SECTION (Responsif dengan Flexbox) */
+      /* ===================================== */
+
+      .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        /* Memungkinkan item turun baris */
+        gap: 20px;
+        /* Jarak antar item */
+        justify-content: center;
+      }
+
+      .project-item {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Lebar awal, akan ditimpa oleh media query */
+        width: calc(33% - 20px);
+        min-width: 300px;
+        /* Mencegah item terlalu kecil di desktop */
+        transition: transform 0.3s;
+      }
+
+      .project-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-item h3 {
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+      /* ===================================== */
+      /* 6. CONTACT SECTION */
+      /* ===================================== */
+
+      .contact-info {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+      /* ===================================== */
+      /* 7. FOOTER */
+      /* ===================================== */
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        /* Padding footer lebih besar */
+        margin-top: 50px;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+      /* ===================================== */
+      /* 8. MEDIA QUERIES (RESPONSIVITAS) */
+      /* ===================================== */
+      /* Tablet & Layar Menengah (Maksimal 992px) */
+
+      @media (max-width: 992px) {
+        .hero h2 {
+          font-size: 2.2rem;
+        }
+        /* Proyek ditampilkan 2 kolom */
+        .project-item {
+          width: calc(50% - 15px);
+          /* Dua item per baris */
+          min-width: unset;
+        }
+      }
+      /* Ponsel (Maksimal 600px) */
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        /* Navigasi menjadi stacked/tumpuk */
+        nav {
+          flex-direction: column;
+        }
+        nav a {
+          margin: 5px 0;
+          padding: 10px 0;
+        }
+        .hero {
+          padding: 40px 15px;
+        }
+        .hero h2 {
+          font-size: 1.8rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        /* Proyek ditampilkan 1 kolom penuh */
+        .project-item {
+          width: 100%;
+        }
+        .section-content {
+          padding: 40px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your gateway to my skills and projects</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <h2>Hi, I'm Luqman Nul Hakim</h2>
+        <p>
+          A passionate Web Developer, UX UI Designer dedicated to creating
+          impactful projects.
+        </p>
+        <a href="#projects" class="button">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about" class="section-content">
+      <div class="container">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto">
+          Saya adalah mahasiswa jurusan Teknologi Informasi yang berfokus pada
+          pengembangan web (Frontend) dan perancangan antarmuka pengguna (UX/UI
+          Design). Saya antusias dalam menciptakan solusi digital yang tidak
+          hanya berfungsi dengan baik tetapi juga memberikan pengalaman pengguna
+          yang intuitif dan menyenangkan.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="section-content"
+      style="background-color: #e6f0ff"
+    >
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <h3>Project Web Portfolio</h3>
+            <p>
+              Pembuatan website portofolio pribadi menggunakan HTML, CSS, dan
+              JavaScript murni.
+            </p>
+          </div>
+          <div class="project-item">
+            <h3>UI/UX Aplikasi E-Commerce</h3>
+            <p>
+              Desain Wireframe dan Prototype untuk aplikasi Mobile e-commerce
+              menggunakan Figma.
+            </p>
+          </div>
+          <div class="project-item">
+            <h3>Landing Page Bisnis</h3>
+            <p>
+              Perancangan dan implementasi Landing Page responsif untuk promosi
+              layanan jasa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-content">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+          <p>
+            Email:
+            <a href="mailto:luqmannulhakim809@gmail.com"
+              >luqmannulhakim809@gmail.com</a
+            >
+          </p>
+          <p>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/luqman-nul-hakim-66747823b/"
+              target="_blank"
+              >luqman nul hakim</a
+            >
+          </p>
+          <p>Telepon/WhatsApp: +62 895-4054-38909</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Luqman Nul Hakim. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

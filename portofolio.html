@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya - Karya Luqman Nul Hakim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ===================================== */
+        /* 1. RESET DAN FONT */
+        /* ===================================== */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #1a1a2e;
+            /* Dark Blue/Purple Background */
+            color: #e4e6eb;
+            /* Light text color */
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        /* ===================================== */
+        /* 2. CONTAINER & JUDUL */
+        /* ===================================== */
+        
+        .container {
+            max-width: 1200px;
+            /* Lebar lebih besar untuk portofolio */
+            margin: auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #00bcd4;
+            /* Accent Cyan/Blue Color */
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+            /* Efek glow halus */
+        }
+        /* ===================================== */
+        /* 3. GRID PROYEK (CSS GRID untuk Responsif) */
+        /* ===================================== */
+        
+        .projects-grid {
+            display: grid;
+            /* 3 kolom untuk desktop, otomatis menyesuaikan */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            /* Jarak antar kartu */
+        }
+        /* ===================================== */
+        /* 4. DESAIN KARTU PROYEK */
+        /* ===================================== */
+        
+        .project-card {
+            background: #242a42;
+            /* Warna kartu gelap */
+            border-radius: 10px;
+            overflow: hidden;
+            /* Pastikan gambar tidak keluar dari radius */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            /* Shadow yang menonjol */
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            /* Untuk menata konten di dalam kartu */
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            /* Efek melayang dramatis */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            /* Tinggi gambar tetap */
+            object-fit: cover;
+            /* Pastikan gambar mengisi kotak tanpa terdistorsi */
+            transition: opacity 0.3s;
+        }
+        
+        .project-card:hover img {
+            opacity: 0.85;
+            /* Gambar sedikit meredup saat hover */
+        }
+        
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            /* Konten tumbuh untuk mengisi sisa ruang */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .project-content h2 {
+            color: #00bcd4;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-content p {
+            color: #b0b4be;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        /* ===================================== */
+        /* 5. TOMBOL PROYEK */
+        /* ===================================== */
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            background-color: #00bcd4;
+            color: #1a1a2e;
+            /* Teks gelap di tombol terang */
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: auto;
+            /* Mendorong tombol ke bawah */
+        }
+        
+        .project-link i {
+            margin-left: 8px;
+        }
+        
+        .project-link:hover {
+            background-color: #00a4b7;
+            transform: scale(1.03);
+        }
+        /* ===================================== */
+        /* 6. RESPONSIVITAS */
+        /* ===================================== */
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            /* Pada tablet, biarkan grid menyesuaikan (minmax(300px)) */
+            .projects-grid {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            /* Pada ponsel, pastikan hanya 1 kolom penuh */
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Portofolio Proyek Kreatif ✨</h1>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="Project 1.png" alt="Desain Aplikasi Kopi Shop" />
+                <div class="project-content">
+                    <div>
+                        <h2>Aplikasi Mobile Coffee Shop ☕</h2>
+                        <p>
+                            Keahlian:UX/UI Design (Figma). Saya merancang aplikasi mobile untuk kedai kopi yang memungkinkan pemesanan online, menu interaktif, dan sistem pelacakan pesanan.
+                        </p>
+                    </div>
+                    <a href="https://www.figma.com/design/aCQKvOlCMzHTp6xQRPxhFI/Apps-Kopi-Shop?node-id=0-1&m=dev&t=Z9Ey4PK8CHQrquuu-1" target="_blank" class="project-link">
+              Lihat Figma <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Project 2.png" alt="Desain Aplikasi Perpustakaan Digital" />
+                <div class="project-content">
+                    <div>
+                        <h2>Perpustakaan Digital App 📚</h2>
+                        <p>
+                            Keahlian: UX/UI Design (Figma). Perancangan aplikasi perpustakaan yang fokus pada user-friendliness, memungkinkan pencarian, peminjaman, dan pembacaan buku online dengan antarmuka yang intuitif.
+                        </p>
+                    </div>
+                    <a href="https://www.figma.com/design/vdJMFRQgVSaC5eSoNPN4yK/Aplikasi-Library-Mobile-Apps?node-id=0-1&m=dev&t=q80V1CbLxu4PAMLJ-1" target="_blank" class="project-link">
+              Lihat Figma <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Project 3.png" alt="Website Portofolio Personal" />
+                <div class="project-content">
+                    <div>
+                        <h2>Website Portofolio Pribadi 💻</h2>
+                        <p>
+                            Keahlian: Web Development (HTML/CSS/JS). Pembuatan website personal responsif untuk menampilkan seluruh hasil karya saya sebagai Web Developer dan UX Designer.
+                        </p>
+                    </div>
+                    <a href="file:///C:/portofollio/portofolio.html#" target="_blank" class="project-link">
+              Lihat Live Demo
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

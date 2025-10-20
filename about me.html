@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Saya - Luqman Nul Hakim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ===================================== */
+        /* 1. RESET DAN FONT */
+        /* ===================================== */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #0d1117;
+            /* Dark Background */
+            color: #c9d1d9;
+            /* Light text color */
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        /* ===================================== */
+        /* 2. CONTAINER & TATA LETAK UTAMA */
+        /* ===================================== */
+        
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #161b22;
+            /* Slightly Lighter Dark Container */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #30363d;
+            /* Subtle border */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #58a6ff;
+            /* Accent Blue Color */
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        /* Flexbox untuk konten profil */
+        
+        .profile-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .text-bio {
+            flex: 2;
+            /* Mengambil ruang lebih banyak */
+        }
+        /* ===================================== */
+        /* 3. GAMBAR PROFIL */
+        /* ===================================== */
+        
+        .profile-image-wrapper {
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
+        }
+        
+        .profile-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #58a6ff;
+            /* Border yang menonjol */
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.6);
+            transition: transform 0.3s;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        /* ===================================== */
+        /* 4. DETAIL DAN MINAT */
+        /* ===================================== */
+        
+        .detail-card {
+            background-color: #21262d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 5px solid #58a6ff;
+        }
+        
+        .detail-card h2 {
+            color: #58a6ff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-card h2 i {
+            margin-right: 10px;
+        }
+        
+        .detail-card ul {
+            list-style: none;
+        }
+        
+        .detail-card li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-card li i {
+            color: #58a6ff;
+            margin-right: 8px;
+        }
+        /* ===================================== */
+        /* 5. RESPONSIVITAS (Untuk Ponsel/Tablet) */
+        /* ===================================== */
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            /* Tumpuk Gambar dan Teks di layar kecil */
+            .profile-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .profile-image-wrapper {
+                max-width: 180px;
+                /* Ukuran gambar dikecilkan */
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tentang Saya</h1>
+
+        <div class="profile-content">
+            <div class="profile-image-wrapper">
+                <img src="pict me.jpg" alt="Foto Profil Luqman Nul Hakim" class="profile-image" />
+            </div>
+
+            <div class="text-bio">
+                <p>
+                    Halo! Nama saya Luqman Nul Hakim. Saya seorang Web Developer bersemangat yang memiliki fokus khusus pada Frontend Development dan UX/UI Design. Saya percaya bahwa kombinasi antara kode yang bersih dan desain yang intuitif adalah kunci untuk menciptakan
+                    pengalaman digital yang luar biasa.
+                </p>
+                <br />
+                <p>
+                    Saat ini, saya tinggal di Jl. Balai Desa NO.248 Bandar Khalipah. Minat terbesar saya ada pada eksplorasi teknologi web terbaru dan memahami pola pikir pengguna untuk merancang antarmuka yang efektif.
+                </p>
+            </div>
+        </div>
+
+        <div class="detail-card">
+            <h2><i class="fa-solid fa-code"></i> Keahlian & Tujuan</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-star"></i> Keahlian Utama:Web Development (Frontend), UX/UI Design.
+                </li>
+                <li>
+                    <i class="fa-solid fa-mug-saucer"></i> Hobi: Menikmati kopi sambil belajar hal baru.
+                </li>
+                <li>
+                    <i class="fa-solid fa-lightbulb"></i> Aktivitas Waktu Luang: Mempraktikkan keterampilan dengan membuat Website proyek pribadi.
+                </li>
+            </ul>
+        </div>
+
+        <div class="detail-card">
+            <h2><i class="fa-solid fa-rocket"></i> Visi Masa Depan</h2>
+            <p>
+                Tujuan utama saya adalah menjadi Web Developer & UX Designer profesional yang diakui secara global. Lebih jauh lagi, saya memiliki ambisi untuk mendirikan perusahaan teknologi saya sendiri, yang berfokus pada inovasi dan solusi digital yang berdampak
+                positif bagi masyarakat.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

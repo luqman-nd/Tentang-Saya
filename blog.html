@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memahami Prinsip Dasar UX Design | Blog Luqman</title>
+    <!-- Font Poppins untuk tampilan modern dan bersih -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ikon Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      /* ===================================== */
+      /* 1. FONT & RESET */
+      /* ===================================== */
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+        line-height: 1.8;
+        /* Line height ditingkatkan untuk keterbacaan */
+        padding: 40px 20px;
+      }
+      /* ===================================== */
+      /* 2. LAYOUT ARTIKEL */
+      /* ===================================== */
+
+      .article-wrapper {
+        max-width: 750px;
+        /* Lebar optimal untuk membaca teks panjang */
+        margin: auto;
+        background: white;
+        padding: 50px 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      header h1 {
+        color: #1a1a2e;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .meta-info {
+        font-size: 0.9rem;
+        color: #6c757d;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .meta-info i {
+        margin-right: 5px;
+        color: #007bff;
+      }
+      /* ===================================== */
+      /* 3. TYPOGRAPHY ARTIKEL (Isi Konten) */
+      /* ===================================== */
+
+      .article-content {
+        font-size: 1.05rem;
+        /* Ukuran font lebih besar untuk kenyamanan baca */
+        color: #495057;
+      }
+
+      .article-content h2 {
+        color: #007bff;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+        padding-bottom: 5px;
+        border-bottom: 2px dashed rgba(0, 123, 255, 0.2);
+      }
+
+      .article-content p {
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .article-content ul,
+      .article-content ol {
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+
+      .article-content strong {
+        color: #1a1a2e;
+        font-weight: 600;
+      }
+
+      .article-content blockquote {
+        border-left: 4px solid #007bff;
+        padding: 15px 20px;
+        margin: 20px 0;
+        background-color: #f8f9fa;
+        font-style: italic;
+        border-radius: 5px;
+      }
+      /* ===================================== */
+      /* 4. TOMBOL KEMBALI */
+      /* ===================================== */
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 25px;
+        padding: 10px 20px;
+        background-color: #6c757d;
+        /* Warna abu-abu netral */
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .back-btn:hover {
+        background-color: #495057;
+        transform: translateX(-5px);
+        /* Efek mundur saat hover */
+      }
+      /* ===================================== */
+      /* 5. RESPONSIVITAS */
+      /* ===================================== */
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px 10px;
+        }
+        .article-wrapper {
+          padding: 25px 15px;
+        }
+        header h1 {
+          font-size: 2rem;
+        }
+        .article-content h2 {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="article-wrapper">
+      <!-- Tombol kembali ke halaman indeks (Asumsi index.html) -->
+      <a href="index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Artikel
+      </a>
+
+      <!-- Header Artikel -->
+      <header>
+        <h1>Memahami Prinsip Dasar UX Design</h1>
+        <div class="meta-info">
+          <span><i class="fa-solid fa-calendar-days"></i> 1 Januari 2023</span>
+          <span><i class="fa-solid fa-user-pen"></i> Luqman Nul Hakim</span>
+          <span><i class="fa-solid fa-clock"></i> 5 Menit Baca</span>
+        </div>
+      </header>
+
+      <!-- Konten Utama Artikel -->
+      <div class="article-content">
+        <p>
+          User Experience (UX) Design adalah disiplin ilmu yang fundamental
+          dalam menciptakan produk digital yang sukses. Lebih dari sekadar
+          estetika, UX adalah tentang bagaimana pengguna berinteraksi dan
+          merasakan sebuah produk. Fokus utamanya adalah membuat interaksi
+          tersebut menjadi Efisien, Menyenangkan, Dan Relevan.
+        </p>
+
+        <h2>1. Apa Itu UX Design?</h2>
+        <p>
+          UX Design adalah proses meningkatkan kepuasan pengguna terhadap suatu
+          produk dengan meningkatkan kegunaan, aksesibilitas, dan kesenangan
+          yang diberikan dalam interaksi dengan produk tersebut. Intinya, kita
+          mendesain pengalaman total pengguna.
+        </p>
+        <p>
+          Ini melibatkan penelitian mendalam tentang kebutuhan dan perilaku
+          pengguna (riset pengguna), penyusunan alur pengguna (user flow),
+          pembuatan kerangka dasar (wireframing), hingga prototipe beresolusi
+          tinggi.
+        </p>
+
+        <blockquote>
+          "UX bukan hanya tentang fungsionalitas, tetapi juga emosi. Desain yang
+          baik adalah desain yang tidak terlihat; ia hanya berfungsi."
+        </blockquote>
+
+        <h2>2. Lima Pilar Utama UX</h2>
+        <p>
+          Untuk menciptakan pengalaman yang hebat, desainer UX berpegang pada
+          beberapa pilar utama, yang sering disebut sebagai "Honeycomb of UX":
+        </p>
+        <ul>
+          <li>
+            <strong>Usable (Dapat Digunakan):</strong> Produk harus mudah dan
+            efisien untuk mencapai tujuan.
+          </li>
+          <li>
+            <strong>Useful (Berguna):</strong> Produk harus memenuhi kebutuhan
+            spesifik pengguna.
+          </li>
+          <li>
+            <strong>Desirable (Diinginkan):</strong> Elemen visual dan emosional
+            harus menarik dan menciptakan Brand Value.
+          </li>
+          <li>
+            <strong>Findable (Mudah Ditemukan):</strong> Konten harus mudah
+            ditemukan, baik di dalam maupun di luar situs.
+          </li>
+          <li>
+            <strong>Accessible (Dapat Diakses):</strong> Produk harus dapat
+            digunakan oleh orang dengan berbagai kemampuan (termasuk
+            disabilitas).
+          </li>
+        </ul>
+
+        <h2>3. Proses Desain yang Berpusat pada Pengguna</h2>
+        <p>
+          Metodologi desain yang paling umum adalah User-Centered Design (UCD),
+          yang melibatkan siklus berulang:
+        </p>
+        <ol>
+          <li>
+            <strong>Pahami Konteks:</strong> Melakukan riset dan wawancara
+            pengguna.
+          </li>
+          <li>
+            <strong>Tentukan Kebutuhan:</strong> Mengidentifikasi masalah dan
+            mendefinisikan persona pengguna.
+          </li>
+          <li>
+            <strong>Rancang Solusi:</strong> Membuat Wireframe dan prototipe.
+          </li>
+          <li>
+            <strong>Evaluasi Desain:</strong> Melakukan uji coba dengan pengguna
+            nyata dan mengumpulkan Feedback.
+          </li>
+        </ol>
+
+        <p>
+          Kesimpulannya, investasi dalam UX Design adalah investasi untuk
+          kepuasan pelanggan dan kesuksesan jangka panjang produk Anda. Desain
+          yang intuitif akan mengurangi frustrasi, meningkatkan adopsi, dan pada
+          akhirnya, mendorong pertumbuhan bisnis.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
